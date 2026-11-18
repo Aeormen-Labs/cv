@@ -803,7 +803,8 @@ h3 { font-family: var(--serif); font-weight: 400; }
     if (!el) return;
     e.preventDefault();
     el.scrollIntoView({ behavior: reduce.matches ? 'auto' : 'smooth', block: 'start' });
-    try { history.pushState(null, '', '#' + id); } catch (err) {}
+    /* Keep the address clean: scroll without adding #section to the URL, and drop any existing one */
+    if (location.hash) { try { history.replaceState(null, '', location.pathname + location.search); } catch (err) {} }
     if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
     el.focus({ preventScroll: true });
     if (id !== 'top' && id !== 'main') setTimeout(function () { flash(id); }, reduce.matches ? 0 : 380);
