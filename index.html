@@ -355,7 +355,6 @@ h3 { font-family: var(--serif); font-weight: 400; }
 .ev-list { list-style: none; margin: 0; padding: 0; }
 .ev-list a { display: block; padding: .75rem 0; border-top: 1px solid var(--line); color: var(--ink); text-decoration: none; min-height: 44px; }
 .ev-role { display: block; font-size: .8125rem; color: var(--ink-3); margin-bottom: .15rem; }
-.ev-go { color: var(--accent); white-space: nowrap; }
 .ev-list a:hover .ev-text { text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: .2em; }
 @media (prefers-reduced-motion: no-preference) {
   .ev-list li { animation: rise .45s var(--ease) both; animation-delay: calc(var(--n, 0) * 55ms); }
@@ -893,12 +892,8 @@ h3 { font-family: var(--serif); font-weight: 400; }
       r.textContent = role.dataset.short + ' · ' + role.dataset.when;
       var t = document.createElement('span');
       t.className = 'ev-text';
-      t.textContent = point.textContent + ' ';
-      var go = document.createElement('span');
-      go.className = 'ev-go';
-      go.setAttribute('aria-hidden', 'true');
-      go.textContent = 'See in context ↑';
-      a.appendChild(r); a.appendChild(t); a.appendChild(go);
+      t.textContent = point.textContent;
+      a.appendChild(r); a.appendChild(t);
       li.appendChild(a);
       evList.appendChild(li);
     });
