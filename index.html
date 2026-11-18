@@ -1,0 +1,1228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sofoklis Tsompanoglou, business developer and marketer</title>
+<meta name="description" content="Molecular biologist turned business developer and marketer, based in Västra Götaland, Sweden. Founder of Aeormen Labs.">
+<meta name="theme-color" content="#11161a">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%239b3a26'/%3E%3Cpath d='M6 21h20' stroke='%23f3f0e8' stroke-width='2'/%3E%3C/svg%3E">
+<script>
+(function () {
+  document.documentElement.classList.add('js', 'xmas');
+})();
+</script>
+<style>
+/* Tokens ---------------------------------------------------------------- */
+:root {
+  --serif: "Iowan Old Style", "Sitka Heading", "Sitka Text", Charter, "Bitstream Charter", Cambria, Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI Variable Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --measure: 66ch;
+  --gutter: clamp(16px, 4vw, 48px);
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+:root {
+  color-scheme: dark;
+  --bg: #11161a;
+  --bg-2: #161d22;
+  --ink: #ebe7de;
+  --ink-2: #bcc2c0;
+  --ink-3: #8d9695;
+  --line: #29333a;
+  --line-strong: #5d6a71;
+  --accent: #e58a6f;
+  --accent-ink: #11161a;
+  --accent-soft: rgba(229, 138, 111, .14);
+  --sci: #93b8ac;
+  --sci-soft: rgba(147, 184, 172, .16);
+  --biz-soft: rgba(229, 138, 111, .18);
+  --focus: #f4c9b8;
+}
+
+/* Base ------------------------------------------------------------------ */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; overflow-x: clip; }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  body { transition: background-color .35s var(--ease), color .35s var(--ease); }
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: clamp(1rem, .96rem + .2vw, 1.0625rem);
+  line-height: 1.6;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-underline-offset: .2em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 2px; }
+[tabindex="-1"]:focus { outline: none; }
+p, dd, li { overflow-wrap: break-word; }
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.wrap { max-width: 76rem; margin-inline: auto; padding-inline: var(--gutter); }
+.skip {
+  position: absolute; left: var(--gutter); top: -4rem; z-index: 10;
+  background: var(--accent); color: var(--accent-ink); padding: .75rem 1rem; border-radius: 4px; font-weight: 600;
+}
+.skip:focus { top: .75rem; }
+
+/* Snow layer: sits under everything, and the script skips any spot that holds text */
+#snow { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+.site-header, main, .site-footer { position: relative; z-index: 1; }
+/* Header stays on screen while scrolling; it is opaque so nothing shows through */
+.site-header { position: sticky; top: 0; z-index: 3; background: var(--bg); }
+html { scroll-padding-top: 5.5rem; }
+html.scrolled .header-inner { border-bottom-color: transparent; }
+html.scrolled .site-header { box-shadow: 0 1px 0 var(--line), 0 8px 24px rgba(0, 0, 0, .35); }
+
+/* Christmas lights: hang in the empty band above the hero, never over text */
+.garland {
+  position: absolute; left: 0; right: 0; top: 100%; height: 30px; overflow: hidden;
+  pointer-events: none; opacity: 0; transition: opacity .6s var(--ease);
+}
+html.xmas .garland { opacity: 1; }
+html.xmas.scrolled .garland { opacity: 0; } /* lights only hang at the top, so they never cover text */
+.garland svg { display: block; }
+.garland .wire { fill: none; stroke: #3d4b46; stroke-width: 1.2; }
+.garland .cap { fill: #56635e; }
+.garland .glass { fill: var(--c); filter: drop-shadow(0 0 2px var(--c)) drop-shadow(0 0 6px var(--c)); }
+@media (prefers-reduced-motion: no-preference) {
+  .garland .glass { animation: twinkle 3s ease-in-out infinite; animation-delay: calc(var(--d) * -1); }
+}
+@keyframes twinkle { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+.greeting { display: none; font-family: var(--serif); font-size: 1rem; color: var(--ink-2); }
+html.xmas .greeting { display: block; }
+
+/* Spruce forest along the bottom of the screen, behind the snow and all content.
+   Tones sit just above the background so text over them keeps AA contrast. */
+.forest {
+  position: fixed; left: 0; right: 0; bottom: 0; height: clamp(120px, 26vh, 260px);
+  z-index: 0; pointer-events: none; overflow: hidden;
+}
+.forest svg { display: block; width: 100%; height: 100%; }
+.forest .far { fill: #161e23; }
+.forest .near { fill: #1b252b; }
+.forest .ground { fill: #212b31; }
+.forest .tl { fill: var(--c); filter: drop-shadow(0 0 2px var(--c)) drop-shadow(0 0 5px var(--c)); }
+.forest .star { fill: #f2c46d; filter: drop-shadow(0 0 3px #f2c46d) drop-shadow(0 0 8px rgba(242, 196, 109, .6)); }
+@media (prefers-reduced-motion: no-preference) {
+  .forest .tl { animation: twinkle 2.6s ease-in-out infinite; animation-delay: calc(var(--d) * -1); }
+  .forest .star { animation: twinkle 4s ease-in-out infinite; }
+}
+
+/* Header ---------------------------------------------------------------- */
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between; gap: .75rem;
+  min-height: 4.5rem; border-bottom: 1px solid var(--line);
+}
+.brand {
+  font-family: var(--serif); font-size: 1.1rem; color: var(--ink); text-decoration: none;
+  display: inline-flex; align-items: center; min-height: 44px; white-space: nowrap;
+}
+.brand-short { display: none; }
+.site-nav ul { display: flex; gap: .15rem; list-style: none; margin: 0; padding: 0; }
+.site-nav a {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 .7rem;
+  color: var(--ink-2); text-decoration: none; font-size: .95rem; border-radius: 4px;
+}
+.site-nav a:hover { color: var(--ink); background: var(--bg-2); }
+.site-nav a.nav-li { color: var(--accent); font-weight: 600; }
+.site-nav a[aria-current="true"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--accent); border-radius: 4px 4px 0 0; }
+.header-li {
+  display: none; align-items: center; min-height: 44px; padding: 0 .9rem;
+  border: 1.5px solid var(--accent); border-radius: 4px; color: var(--accent); font-weight: 600; font-size: .9rem; text-decoration: none;
+}
+.header-li:hover { background: var(--accent); color: var(--accent-ink); }
+.toggles { display: flex; gap: .25rem; flex: none; }
+.switch {
+  display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; padding: 0 .55rem;
+  border: 0; background: none; color: var(--ink-2); font: inherit; font-size: .9rem; cursor: pointer; border-radius: 6px;
+}
+.switch:hover { color: var(--ink); background: var(--bg-2); }
+.switch-track {
+  position: relative; width: 2.1rem; height: 1.2rem; flex: none;
+  border: 1.5px solid var(--ink-3); border-radius: 999px; transition: background-color .2s, border-color .2s;
+}
+.switch-thumb {
+  position: absolute; top: 50%; left: 2px; width: .8rem; height: .8rem; margin-top: -.4rem;
+  border-radius: 50%; background: var(--ink-3); transition: transform .22s var(--ease), background-color .2s;
+}
+.switch[aria-checked="true"] .switch-track { background: var(--accent); border-color: var(--accent); }
+.switch[aria-checked="true"] .switch-thumb { transform: translateX(.88rem); background: var(--accent-ink); }
+@media (max-width: 900px) { .site-nav { display: none; } .header-li { display: inline-flex; } }
+.header-right { position: relative; display: flex; align-items: center; gap: .5rem; }
+/* Shown only when the browser blocks autoplay; sits under the header, over the lights, never over text */
+.music-hint {
+  position: absolute; top: calc(100% + 12px); right: 0; z-index: 4; margin: 0;
+  padding: .5rem .8rem; white-space: nowrap; font-size: .8125rem; color: var(--ink);
+  background: var(--bg-2); border: 1px solid var(--accent); border-radius: 4px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .4);
+}
+.music-hint[hidden] { display: none; }
+.music-hint::before {
+  content: ""; position: absolute; top: -6px; right: 1.6rem; width: 10px; height: 10px;
+  background: var(--bg-2); border-left: 1px solid var(--accent); border-top: 1px solid var(--accent); transform: rotate(45deg);
+}
+@media (max-width: 900px) { .music-hint::before { right: 6.6rem; } }
+
+/* Music button: a play/pause icon, Falu red while the song plays */
+.music-btn {
+  display: inline-flex; align-items: center; justify-content: center; min-width: 48px; min-height: 44px; padding: 0 .7rem;
+  border: 1.5px solid var(--line-strong); border-radius: 4px; background: none; color: var(--ink-2); cursor: pointer;
+}
+.music-btn:hover { color: var(--ink); border-color: var(--ink-2); }
+.music-btn svg { width: 1.6rem; height: 1.05rem; }
+.music-btn[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
+
+@media (max-width: 480px) {
+  .brand-full { display: none; }
+  .brand-short { display: inline; }
+  .music-btn, .header-li { padding: 0 .65rem; }
+}
+@media (max-width: 359px) {
+  .brand-full { display: none; }
+  .brand-short { display: inline; }
+  .switch { padding: 0 .4rem; }
+}
+
+/* Hero ------------------------------------------------------------------ */
+.hero { padding-block: clamp(2.75rem, 7vw, 6.5rem) clamp(3rem, 6vw, 5rem); }
+.hero-grid { max-width: 52rem; }
+h1 {
+  font-family: var(--serif); font-weight: 400;
+  font-size: clamp(2.55rem, 1.5rem + 4.6vw, 5.4rem);
+  line-height: 1.02; letter-spacing: -.015em; margin: 0 0 1.25rem; text-wrap: balance;
+}
+.lead {
+  font-family: var(--serif); font-size: clamp(1.3rem, 1.05rem + 1.1vw, 1.95rem);
+  line-height: 1.28; margin: 0 0 1.4rem; max-width: 40ch;
+}
+.t-sci { color: var(--sci); display: block; }
+.t-biz { color: var(--accent); }
+.intro { color: var(--ink-2); max-width: 58ch; margin: 0 0 2rem; }
+.cta-row { display: flex; flex-wrap: wrap; gap: .75rem 1rem; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+  min-height: 48px; padding: .7rem 1.25rem; border-radius: 4px;
+  font: inherit; font-weight: 600; font-size: 1rem; text-decoration: none; cursor: pointer;
+  transition: background-color .2s, border-color .2s, color .2s;
+}
+.btn svg { width: 1rem; height: 1rem; flex: none; transition: transform .25s var(--ease); }
+.btn:hover svg { transform: translate(2px, -2px); }
+.btn-primary { background: var(--accent); color: var(--accent-ink); border: 0; }
+.btn-primary:hover { background: color-mix(in srgb, var(--accent) 86%, var(--ink)); text-decoration: none; }
+.btn-quiet { background: transparent; color: var(--ink); border: 1.5px solid var(--line-strong); }
+.btn-quiet:hover { border-color: var(--ink-2); text-decoration: none; }
+@media (max-width: 480px) { .cta-row .btn { flex: 1 1 100%; } }
+/* Career horizon chart ---------------------------------------------------- */
+.horizon { margin: clamp(3.25rem, 7vw, 5.5rem) 0 0; }
+.horizon-head {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+  gap: .5rem 2rem; margin-bottom: 1.1rem;
+}
+.h-small { font-family: var(--sans); font-size: 1rem; font-weight: 600; margin: 0; letter-spacing: 0; }
+.legend { display: flex; flex-wrap: wrap; gap: .4rem 1.25rem; list-style: none; margin: 0; padding: 0; font-size: .875rem; color: var(--ink-2); }
+.legend li { display: inline-flex; align-items: center; gap: .5rem; }
+.key { display: inline-block; width: 1.4rem; height: .55rem; border-radius: 2px; }
+.key-biz { background: var(--accent); }
+.key-sci { background: var(--sci); }
+
+.chart { --d0: 2011; --span: 16; --label: 8.6rem; }
+@media (min-width: 720px) { .chart { --label: 14rem; } }
+.axis, .bar-row { display: grid; grid-template-columns: var(--label) minmax(0, 1fr); }
+.axis-track { position: relative; height: 1.6rem; }
+.axis-track span {
+  position: absolute; top: 0; left: calc((var(--y) - var(--d0) + .5) / var(--span) * 100%);
+  transform: translateX(-50%); font-size: .75rem; color: var(--ink-3); font-variant-numeric: tabular-nums;
+}
+@media (max-width: 899px) { .axis-track span.minor { display: none; } }
+.chart-group { font-family: var(--sans); font-size: .8125rem; font-weight: 600; color: var(--ink-3); margin: .9rem 0 .2rem; letter-spacing: .02em; }
+.bars { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--line); }
+.bar-row {
+  align-items: center; min-height: 48px; color: inherit; text-decoration: none;
+  border-top: 1px solid var(--line); transition: background-color .2s;
+}
+.bar-row:hover, .bar-row:focus-visible { background: var(--bg-2); text-decoration: none; }
+.bar-row:focus-visible { outline-offset: -2px; }
+.bar-label { display: flex; flex-direction: column; padding: .4rem .75rem .4rem .25rem; line-height: 1.25; min-width: 0; }
+.bar-name { font-size: .9rem; color: var(--ink); }
+.bar-dates { font-size: .75rem; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.bar-track {
+  position: relative; align-self: stretch;
+  background-image: linear-gradient(to right, var(--line) 1px, transparent 1px);
+  background-size: calc(100% / var(--span)) 100%;
+}
+.bar {
+  --c: var(--sci);
+  position: absolute; top: 50%; height: 10px; margin-top: -5px; border-radius: 2px;
+  left: calc((var(--s) - var(--d0)) / var(--span) * 100%);
+  width: calc((var(--e) - var(--s)) / var(--span) * 100%);
+  background: var(--c);
+  transition: height .2s var(--ease), margin-top .2s var(--ease);
+}
+.bar-row[data-field="biz"] .bar { --c: var(--accent); }
+.bars-study .bar { background: var(--sci-soft); box-shadow: inset 0 0 0 2px var(--c); }
+.bars-study .bar-row[data-field="biz"] .bar { background: var(--biz-soft); }
+.bar-row:hover .bar, .bar-row:focus-visible .bar { height: 14px; margin-top: -7px; }
+.bar.ongoing::after {
+  content: ""; position: absolute; right: -6px; top: 50%; width: 12px; height: 12px; margin-top: -6px;
+  border-radius: 50%; background: var(--c); border: 2px solid var(--bg);
+}
+.horizon figcaption { margin-top: .9rem; font-size: .8125rem; color: var(--ink-3); max-width: 80ch; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .js .chart.is-drawn .bar { animation: draw .95s var(--ease) both; animation-delay: calc(var(--i, 0) * 85ms + 120ms); }
+  .bar.ongoing::after { animation: live 2.6s ease-out 1.6s infinite; }
+}
+@keyframes draw {
+  from { clip-path: inset(-10px 100% -10px 0); }
+  to   { clip-path: inset(-10px -14px -10px 0); }
+}
+@keyframes live {
+  0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--c) 55%, transparent); }
+  70%  { box-shadow: 0 0 0 9px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+/* Sections -------------------------------------------------------------- */
+.section { padding-block: clamp(3.5rem, 8vw, 6.5rem); border-top: 1px solid var(--line); }
+.section-grid { display: grid; gap: 1.75rem; }
+@media (min-width: 960px) { .section-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: 4rem; } }
+h2 {
+  font-family: var(--serif); font-weight: 400; font-size: clamp(1.9rem, 1.45rem + 1.7vw, 2.8rem);
+  line-height: 1.1; letter-spacing: -.01em; margin: 0 0 .7rem;
+}
+h3 { font-family: var(--serif); font-weight: 400; }
+.section-note { color: var(--ink-2); margin: 0; max-width: 34ch; font-size: .95rem; }
+.section-body { min-width: 0; }
+
+/* Experience ------------------------------------------------------------ */
+.roles { list-style: none; margin: 0; padding: 0; }
+.role {
+  --c: var(--sci);
+  display: grid; gap: .35rem 2rem; padding: 1.9rem 0; border-top: 1px solid var(--line); scroll-margin-top: 1.5rem;
+}
+.role[data-field="biz"] { --c: var(--accent); }
+.role:first-child { border-top: 0; padding-top: .2rem; }
+@media (min-width: 700px) { .role { grid-template-columns: 10.5rem minmax(0, 1fr); } }
+.role-when {
+  display: flex; align-items: baseline; gap: .6rem; font-size: .9rem; color: var(--ink-2);
+  font-variant-numeric: tabular-nums; padding-top: .35rem;
+}
+.role-when::before { content: ""; width: .55rem; height: .55rem; flex: none; background: var(--c); }
+.role-title { font-size: 1.5rem; line-height: 1.2; margin: 0; }
+.role-org { margin: .2rem 0 .9rem; color: var(--ink-2); }
+.points { list-style: none; margin: 0; padding: 0; max-width: var(--measure); }
+.points li {
+  position: relative; padding: .35rem .6rem .35rem 1.3rem; margin-left: -.6rem; border-radius: 3px;
+  scroll-margin-top: 2rem; transition: background-color .35s, box-shadow .35s;
+}
+.points li::before { content: ""; position: absolute; left: .55rem; top: calc(.35rem + .8em - 2.5px); width: 5px; height: 5px; border-radius: 50%; background: var(--c); }
+.points li.is-evidence { background: var(--accent-soft); box-shadow: inset 2px 0 0 var(--accent); }
+.is-flash { animation: flash 1.9s var(--ease); }
+@keyframes flash { 0%, 25% { background-color: var(--biz-soft); } 100% { background-color: transparent; } }
+
+/* Small section subheadings (certifications, languages) */
+.sub-h { font-family: var(--sans); font-size: 1rem; font-weight: 600; margin: 0 0 .9rem; }
+
+/* Skills ---------------------------------------------------------------- */
+.skills-wrap { display: grid; gap: 2.5rem; }
+.skills-side { display: none; }
+@media (min-width: 1100px) {
+  .skills-wrap { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3rem; }
+  .skills-side { display: block; }
+}
+.skill-list { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--line); }
+.skill-btn {
+  position: relative; display: flex; flex-direction: column; gap: .15rem; width: 100%; min-height: 48px;
+  padding: .8rem .9rem .8rem 1.1rem; text-align: left; cursor: pointer;
+  background: none; border: 0; border-top: 1px solid var(--line); color: var(--ink); font: inherit;
+  transition: background-color .2s;
+}
+.skill-btn::before {
+  content: ""; position: absolute; left: 0; top: .6rem; bottom: .6rem; width: 2px; background: var(--accent);
+  transform: scaleY(0); transition: transform .25s var(--ease);
+}
+.skill-btn:hover { background: var(--bg-2); }
+.skill-btn[aria-pressed="true"] { background: var(--bg-2); }
+.skill-btn[aria-pressed="true"]::before { transform: scaleY(1); }
+.skill-btn:focus-visible { outline-offset: -2px; }
+.skill-name { font-size: 1rem; line-height: 1.35; }
+.skill-roles { font-size: .8125rem; color: var(--ink-3); }
+.skill-btn[aria-pressed="true"] .skill-name { color: var(--accent); }
+
+.evidence { display: none; }
+.js .evidence { display: block; }
+.skills-side .evidence { position: sticky; top: 6.5rem; padding-left: 2rem; border-left: 1px solid var(--line); }
+.skill-item > .evidence { padding: .25rem 1rem 1rem 1.1rem; background: var(--bg-2); }
+.ev-title { font-size: 1.35rem; line-height: 1.25; margin: 0 0 .35rem; }
+.skill-item > .evidence .ev-title { display: none; }
+.ev-note { font-size: .875rem; color: var(--ink-3); margin: 0 0 .75rem; }
+.ev-list { list-style: none; margin: 0; padding: 0; }
+.ev-list a { display: block; padding: .75rem 0; border-top: 1px solid var(--line); color: var(--ink); text-decoration: none; min-height: 44px; }
+.ev-role { display: block; font-size: .8125rem; color: var(--ink-3); margin-bottom: .15rem; }
+.ev-go { color: var(--accent); white-space: nowrap; }
+.ev-list a:hover .ev-text { text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: .2em; }
+@media (prefers-reduced-motion: no-preference) {
+  .ev-list li { animation: rise .45s var(--ease) both; animation-delay: calc(var(--n, 0) * 55ms); }
+}
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* Education and languages ---------------------------------------------- */
+.edu { list-style: none; margin: 0 0 3rem; padding: 0; }
+.edu li {
+  display: grid; gap: .2rem 2rem; padding: 1.1rem 0; border-top: 1px solid var(--line); scroll-margin-top: 1.5rem;
+}
+.edu li:first-child { border-top: 0; padding-top: .2rem; }
+@media (min-width: 700px) { .edu li { grid-template-columns: 10.5rem minmax(0, 1fr); } }
+.edu-when { font-size: .9rem; color: var(--ink-2); font-variant-numeric: tabular-nums; padding-top: .15rem; }
+.edu-what { font-family: var(--serif); font-size: 1.2rem; line-height: 1.3; margin: 0; }
+.edu-where { margin: .15rem 0 0; color: var(--ink-2); }
+.edu-extra { display: grid; gap: 3rem; }
+@media (min-width: 760px) { .edu-extra { grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 3.5rem; } }
+.certs { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--line); }
+.certs li { padding: .8rem 0; border-top: 1px solid var(--line); }
+.certs span { display: block; font-size: .9rem; color: var(--ink-2); }
+
+.langs { container-type: inline-size; }
+.lang-note { font-size: .875rem; color: var(--ink-3); margin: -.4rem 0 .9rem; }
+.lang-list { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--line); }
+.lang {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "name level" "scale scale";
+  gap: .5rem 1rem; align-items: center; padding: .8rem 0; border-top: 1px solid var(--line);
+}
+@container (min-width: 430px) {
+  .lang { grid-template-columns: 9.5rem 3.6rem minmax(0, 1fr); grid-template-areas: "name level scale"; }
+}
+.lang-name { grid-area: name; line-height: 1.25; }
+.lang-name small { display: block; font-size: .8125rem; color: var(--ink-3); }
+.lang-level { grid-area: level; font-weight: 600; font-variant-numeric: tabular-nums; }
+.cefr { grid-area: scale; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 3px; }
+.cefr i {
+  font-style: normal; font-size: .6875rem; font-weight: 600; text-align: center; line-height: 1.5rem; height: 1.5rem;
+  color: var(--ink-3); box-shadow: inset 0 0 0 1px var(--line); border-radius: 2px;
+}
+.cefr i.on { background: var(--ink-2); color: var(--bg); box-shadow: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .js .cefr i.on { animation: fill .5s var(--ease) both; animation-delay: calc(var(--k) * 70ms + 200ms); }
+}
+@keyframes fill { from { background: transparent; color: var(--ink-3); } }
+
+/* Contact --------------------------------------------------------------- */
+.contact-lede { font-family: var(--serif); font-size: clamp(1.35rem, 1.1rem + 1vw, 1.85rem); line-height: 1.3; margin: 0 0 1.5rem; max-width: 26ch; }
+.contact-list { margin: 2.5rem 0 0; border-top: 1px solid var(--line); max-width: 46rem; }
+.c-row {
+  display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: .25rem 1rem; align-items: center;
+  padding: .3rem 0; border-bottom: 1px solid var(--line);
+}
+.c-row dt { color: var(--ink-3); font-size: .875rem; }
+.c-row dd { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0 1rem; min-width: 0; }
+.c-row dd a { display: inline-flex; align-items: center; min-height: 44px; overflow-wrap: anywhere; }
+.c-row .plain { display: inline-block; padding-block: .6rem; }
+.copy-btn {
+  min-height: 44px; padding: 0 .9rem; border: 1.5px solid var(--line-strong); border-radius: 4px;
+  background: none; color: var(--ink-2); font: inherit; font-size: .875rem; cursor: pointer;
+}
+.copy-btn:hover { color: var(--ink); border-color: var(--ink-2); }
+@media (max-width: 520px) { .c-row { grid-template-columns: 1fr; padding-top: .7rem; } }
+
+/* Footer ---------------------------------------------------------------- */
+.footer-inner {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .5rem 1.5rem;
+  padding-block: 1.5rem 2rem; border-top: 1px solid var(--line); font-size: .875rem; color: var(--ink-3);
+}
+.footer-inner p { margin: 0; }
+.footer-inner a { display: inline-flex; align-items: center; min-height: 44px; }
+
+/* Reduced motion: no transitions anywhere */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
+/* Print: a clean paper CV */
+@media print {
+  html:root { --bg: #fff; --bg-2: #fff; --ink: #000; --ink-2: #222; --ink-3: #444; --line: #ccc; --accent: #7a2a1b; --sci: #2f5a4f; }
+  #snow, .forest, .garland, .greeting, .music-btn, .toggles, .site-nav, .skip, .evidence, .copy-btn, .cta-row, .skills-side { display: none !important; }
+  .section, .hero { padding-block: 1.25rem; }
+  .role, .edu li { break-inside: avoid; }
+  a { color: inherit; text-decoration: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="forest" aria-hidden="true"><svg id="forest" focusable="false" preserveAspectRatio="none"></svg></div>
+<canvas id="snow" aria-hidden="true"></canvas>
+
+<header class="site-header">
+  <div class="wrap header-inner" data-nosnow>
+    <a class="brand" href="#top"><span class="brand-full">Sofoklis Tsompanoglou</span><span class="brand-short">S. Tsompanoglou</span></a>
+    <div class="header-right">
+      <nav class="site-nav" aria-label="Sections">
+        <ul>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="nav-li" href="https://www.linkedin.com/in/sofoklis-tsompanoglou-36571020b" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </nav>
+      <button class="music-btn" id="musicBtn" type="button" aria-pressed="false" aria-label="Background music, play or pause" title="Play or pause music">
+        <svg viewBox="0 0 24 16" aria-hidden="true"><path d="M1.5 2.3c0-1 1.1-1.6 1.9-1.1l8.2 5.4c.8.5.8 1.7 0 2.2l-8.2 5.4c-.8.5-1.9-.1-1.9-1.1z" fill="currentColor"/><rect x="13.6" y="1" width="3.7" height="14" rx="1.3" fill="currentColor"/><rect x="19.6" y="1" width="3.7" height="14" rx="1.3" fill="currentColor"/></svg>
+      </button>
+      <p class="music-hint" id="musicHint" role="status" hidden></p>
+      <a class="header-li" href="https://www.linkedin.com/in/sofoklis-tsompanoglou-36571020b" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+  <div class="garland" aria-hidden="true"><svg id="garland" focusable="false"></svg></div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-name">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-text" data-nosnow>
+          <h1 id="hero-name">Sofoklis Tsompanoglou</h1>
+          <p class="lead"><span class="t-sci">Molecular biologist</span> turned <span class="t-biz">business developer and marketer</span>.</p>
+          <p class="intro">I run Aeormen Labs, an AI based business development and marketing company for small and medium sized businesses. Before that I worked in life science R&amp;D, where I built a pipeline of academic customers across Europe and contributed to the acquisition discussions that led to Envue's exit in November 2025.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://www.linkedin.com/in/sofoklis-tsompanoglou-36571020b" target="_blank" rel="noopener">
+              Connect on LinkedIn
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5l7-7M6 4.5h5.5V10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn-quiet" href="tel:+46702826661">+46 702 82 66 61</a>
+          </div>
+        </div>
+      </div>
+
+      <figure class="horizon" aria-labelledby="horizon-h" data-nosnow>
+        <div class="horizon-head">
+          <h2 id="horizon-h" class="h-small">Career at a glance, 2011 to now</h2>
+          <ul class="legend">
+            <li><span class="key key-biz" aria-hidden="true"></span>Business and marketing</li>
+            <li><span class="key key-sci" aria-hidden="true"></span>Science and healthcare</li>
+          </ul>
+        </div>
+        <div class="chart" id="chart">
+          <div class="axis" aria-hidden="true">
+            <span></span>
+            <div class="axis-track" id="axis">
+              <span style="--y:2011">2011</span><span class="minor" style="--y:2012">2012</span><span class="minor" style="--y:2013">2013</span>
+              <span style="--y:2014">2014</span><span class="minor" style="--y:2015">2015</span><span class="minor" style="--y:2016">2016</span>
+              <span style="--y:2017">2017</span><span class="minor" style="--y:2018">2018</span><span class="minor" style="--y:2019">2019</span>
+              <span style="--y:2020">2020</span><span class="minor" style="--y:2021">2021</span><span class="minor" style="--y:2022">2022</span>
+              <span style="--y:2023">2023</span><span class="minor" style="--y:2024">2024</span><span class="minor" style="--y:2025">2025</span>
+              <span style="--y:2026">2026</span>
+            </div>
+          </div>
+
+          <h3 class="chart-group">Work</h3>
+          <ol class="bars">
+            <li><a class="bar-row" data-field="biz" href="#exp-aeormen" data-start="2026" data-end="now">
+              <span class="bar-label"><span class="bar-name">Aeormen Labs</span><span class="bar-dates">2026 to present</span></span>
+              <span class="bar-track"><span class="bar" style="--s:2026;--e:2026.9"></span></span></a></li>
+            <li><a class="bar-row" data-field="biz" href="#exp-envue" data-start="2024" data-end="2025.417">
+              <span class="bar-label"><span class="bar-name">Envue Technologies</span><span class="bar-dates">Jan 2024 to May 2025</span></span>
+              <span class="bar-track"><span class="bar" style="--s:2024;--e:2025.417"></span></span></a></li>
+            <li><a class="bar-row" data-field="sci" href="#exp-moleculent" data-start="2022.667" data-end="2023.75">
+              <span class="bar-label"><span class="bar-name">Moleculent</span><span class="bar-dates">Sep 2022 to Sep 2023</span></span>
+              <span class="bar-track"><span class="bar" style="--s:2022.667;--e:2023.75"></span></span></a></li>
+            <li><a class="bar-row" data-field="sci" href="#exp-thrace" data-start="2021" data-end="2023">
+              <span class="bar-label"><span class="bar-name">Democritus and Aimoanalysis</span><span class="bar-dates">2021 to 2022</span></span>
+              <span class="bar-track"><span class="bar" style="--s:2021;--e:2023"></span></span></a></li>
+          </ol>
+
+          <h3 class="chart-group">Study</h3>
+          <ol class="bars bars-study">
+            <li><a class="bar-row" data-field="biz" href="#edu-skovde" data-start="2026.583" data-end="now">
+              <span class="bar-label"><span class="bar-name">MSc, Skövde</span><span class="bar-dates">From Aug 2026</span></span>
+              <span class="bar-track"><span class="bar" style="--s:2026.583;--e:2026.9"></span></span></a></li>
+            <li><a class="bar-row" data-field="sci" href="#edu-bsc-mb" data-start="2017" data-end="2022">
+              <span class="bar-label"><span class="bar-name">BSc, Molecular biology</span><span class="bar-dates">2017 to 2021</span></span>
+              <span class="bar-track"><span class="bar" style="--s:2017;--e:2022"></span></span></a></li>
+            <li><a class="bar-row" data-field="sci" href="#edu-msc-tr" data-start="2017" data-end="2021">
+              <span class="bar-label"><span class="bar-name">MSc, Translational research</span><span class="bar-dates">2017 to 2020</span></span>
+              <span class="bar-track"><span class="bar" style="--s:2017;--e:2021"></span></span></a></li>
+            <li><a class="bar-row" data-field="sci" href="#edu-nursing" data-start="2011" data-end="2016">
+              <span class="bar-label"><span class="bar-name">BSc, Nursing</span><span class="bar-dates">2011 to 2015</span></span>
+              <span class="bar-track"><span class="bar" style="--s:2011;--e:2016"></span></span></a></li>
+          </ol>
+        </div>
+        <figcaption>Select a row to jump to its details. A dot marks something ongoing. Year-only dates are drawn as full calendar years. Exormia, an app in stealth mode, appears under experience but not here.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="experience" aria-labelledby="exp-h">
+    <div class="wrap section-grid">
+      <header class="section-head" data-nosnow>
+        <h2 id="exp-h">Experience</h2>
+        <p class="section-note">Newest first. The skills section below links each skill back to these lines.</p>
+      </header>
+      <div class="section-body" data-nosnow>
+        <ol class="roles">
+          <li class="role" id="exp-aeormen" data-field="biz" data-short="Aeormen Labs" data-when="2026 to present">
+            <div class="role-when">2026 to present</div>
+            <div class="role-body">
+              <h3 class="role-title">Founder</h3>
+              <p class="role-org"><a href="https://aeormenlabs.com" target="_blank" rel="noopener">Aeormen Labs</a></p>
+              <ul class="points">
+                <li id="ev-a1">Runs an AI based business development and marketing company for small and medium sized businesses.</li>
+                <li id="ev-a2">Offers lead generation, marketing audits, web design and business development automation.</li>
+                <li id="ev-a3">Built the company's AI tooling, including a tool that audits a website with several AI agents in parallel and produces a scored report.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="role" id="exp-exormia" data-field="biz" data-short="Exormia" data-when="In stealth mode">
+            <div class="role-when">In stealth mode</div>
+            <div class="role-body">
+              <h3 class="role-title">Founder</h3>
+              <p class="role-org">Exormia</p>
+              <ul class="points">
+                <li>Building an app, currently in stealth mode.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="role" id="exp-envue" data-field="biz"data-short="Envue Technologies" data-when="Jan 2024 to May 2025">
+            <div class="role-when">Jan 2024 to May 2025</div>
+            <div class="role-body">
+              <h3 class="role-title">Scientist, molecular biologist</h3>
+              <p class="role-org">Envue Technologies AB</p>
+              <ul class="points">
+                <li id="ev-e1">Presented the technology to the CEO, stakeholders and key opinion leaders across Europe, contributing to acquisition discussions that led to Envue's exit in November 2025.</li>
+                <li id="ev-e2">Built a pipeline of academic customers across Europe, offering research groups paid single particle measurement services.</li>
+                <li id="ev-e3">Coordinated a technical collaboration with RISE (Research Institutes of Sweden) on a comparative method study.</li>
+                <li id="ev-e4">Ran competitor scouting, market analysis and customer pain-point evaluation to inform product positioning.</li>
+                <li id="ev-e5">Turned a physics based concept into a reproducible single particle characterization method for LNPs, EVs and proteins.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="role" id="exp-moleculent" data-field="sci" data-short="Moleculent AB" data-when="Sep 2022 to Sep 2023">
+            <div class="role-when">Sep 2022 to Sep 2023</div>
+            <div class="role-body">
+              <h3 class="role-title">R&amp;D scientist</h3>
+              <p class="role-org">Moleculent AB</p>
+              <ul class="points">
+                <li id="ev-m1">Co-designed more than 10 early-stage hardware components for a spatial omics platform with engineers, across wet lab, dry lab and engineering.</li>
+                <li id="ev-m3">Responsible for wet lab protocol development.</li>
+                <li id="ev-m2">Presented at company-wide quarterly meetings and trained new team members.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="role" id="exp-thrace" data-field="sci" data-short="Democritus University and Aimoanalysis Evrou" data-when="2021 to 2022">
+            <div class="role-when">2021 to 2022</div>
+            <div class="role-body">
+              <h3 class="role-title">Research associate and laboratory technician</h3>
+              <p class="role-org">Democritus University of Thrace and Aimoanalysis Evrou</p>
+              <ul class="points">
+                <li id="ev-l1">Mammalian cell culture, RNA and exosome isolation, and qPCR-based diagnostics during the COVID-19 pandemic.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills" aria-labelledby="skills-h">
+    <div class="wrap section-grid">
+      <header class="section-head" data-nosnow>
+        <h2 id="skills-h">Skills</h2>
+        <p class="section-note">Each skill lists the roles where I used it. Pick one to see the exact lines, which are also marked in the experience list.</p>
+      </header>
+      <div class="section-body" data-nosnow>
+        <div class="skills-wrap">
+          <ul class="skill-list" id="skillList">
+            <li class="skill-item"><button class="skill-btn" type="button" aria-pressed="false" aria-controls="evidence" data-evidence="ev-a2 ev-e2 ev-e1">
+              <span class="skill-name">Business development and client relationships</span><span class="skill-roles">Aeormen Labs · Envue</span></button></li>
+            <li class="skill-item"><button class="skill-btn" type="button" aria-pressed="false" aria-controls="evidence" data-evidence="ev-e4">
+              <span class="skill-name">Market and competitor analysis</span><span class="skill-roles">Envue</span></button></li>
+            <li class="skill-item"><button class="skill-btn" type="button" aria-pressed="false" aria-controls="evidence" data-evidence="ev-e4">
+              <span class="skill-name">Commercial strategy and product positioning</span><span class="skill-roles">Envue</span></button></li>
+            <li class="skill-item"><button class="skill-btn" type="button" aria-pressed="false" aria-controls="evidence" data-evidence="ev-e1 ev-e3 ev-m2">
+              <span class="skill-name">Strategic partnerships and stakeholder engagement</span><span class="skill-roles">Envue · Moleculent</span></button></li>
+            <li class="skill-item"><button class="skill-btn" type="button" aria-pressed="false" aria-controls="evidence" data-evidence="ev-a2 ev-e2">
+              <span class="skill-name">Lead generation</span><span class="skill-roles">Aeormen Labs · Envue</span></button></li>
+            <li class="skill-item"><button class="skill-btn" type="button" aria-pressed="false" aria-controls="evidence" data-evidence="ev-a1 ev-a3">
+              <span class="skill-name">AI-driven marketing</span><span class="skill-roles">Aeormen Labs</span></button></li>
+            <li class="skill-item"><button class="skill-btn" type="button" aria-pressed="false" aria-controls="evidence" data-evidence="ev-a2 ev-a3">
+              <span class="skill-name">Marketing audits</span><span class="skill-roles">Aeormen Labs</span></button></li>
+            <li class="skill-item"><button class="skill-btn" type="button" aria-pressed="false" aria-controls="evidence" data-evidence="ev-a3 ev-a2">
+              <span class="skill-name">Web design and AI tooling</span><span class="skill-roles">Aeormen Labs</span></button></li>
+            <li class="skill-item"><button class="skill-btn" type="button" aria-pressed="false" aria-controls="evidence" data-evidence="ev-e5 ev-m1">
+              <span class="skill-name">Product co-design</span><span class="skill-roles">Envue · Moleculent</span></button></li>
+            <li class="skill-item"><button class="skill-btn" type="button" aria-pressed="false" aria-controls="evidence" data-evidence="ev-e5 ev-m1 ev-m3 ev-l1">
+              <span class="skill-name">Scientific depth</span><span class="skill-roles">Envue · Moleculent · Democritus and Aimoanalysis</span></button></li>
+          </ul>
+          <div class="skills-side" id="skillsSide">
+            <div class="evidence" id="evidence">
+              <h3 class="ev-title" id="evTitle"></h3>
+              <p class="ev-note">Where I used it. Select a line to see it in context.</p>
+              <ol class="ev-list" id="evList"></ol>
+            </div>
+          </div>
+        </div>
+        <p class="visually-hidden" aria-live="polite" id="evStatus"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="education" aria-labelledby="edu-h">
+    <div class="wrap section-grid">
+      <header class="section-head" data-nosnow>
+        <h2 id="edu-h">Education</h2>
+        <p class="section-note">Degrees, certifications and languages.</p>
+      </header>
+      <div class="section-body" data-nosnow>
+        <ol class="edu">
+          <li id="edu-skovde">
+            <div class="edu-when">From Aug 2026, in progress</div>
+            <div><h3 class="edu-what">MSc Business Development and Marketing</h3><p class="edu-where">University of Skövde, Sweden</p></div>
+          </li>
+          <li id="edu-bsc-mb">
+            <div class="edu-when">2017 to 2021</div>
+            <div><h3 class="edu-what">BSc Molecular Biology and Genetics</h3><p class="edu-where">Democritus University of Thrace, Greece</p></div>
+          </li>
+          <li id="edu-msc-tr">
+            <div class="edu-when">2017 to 2020</div>
+            <div><h3 class="edu-what">MSc Translational Research in Biomedicine</h3><p class="edu-where">Democritus University of Thrace, Greece</p></div>
+          </li>
+          <li id="edu-nursing">
+            <div class="edu-when">2011 to 2015</div>
+            <div><h3 class="edu-what">BSc Nursing</h3><p class="edu-where">Technological Educational Institute of Eastern Macedonia and Thrace, Greece</p></div>
+          </li>
+        </ol>
+
+        <div class="edu-extra">
+          <div>
+            <h3 class="sub-h">Certifications</h3>
+            <ul class="certs">
+              <li>Program Management Essentials<span>IBM</span></li>
+              <li>Innovation Management<span>Rotterdam</span></li>
+            </ul>
+          </div>
+          <div class="langs">
+            <h3 class="sub-h">Languages</h3>
+            <p class="lang-note">Levels on the CEFR scale, from A1 (beginner) to C2 (mastery).</p>
+            <ul class="lang-list">
+              <li class="lang"><span class="lang-name">Greek<small>Mother tongue</small></span><span class="lang-level">Native</span>
+                <span class="cefr" aria-hidden="true"><i class="on" style="--k:0">A1</i><i class="on" style="--k:1">A2</i><i class="on" style="--k:2">B1</i><i class="on" style="--k:3">B2</i><i class="on" style="--k:4">C1</i><i class="on" style="--k:5">C2</i></span></li>
+              <li class="lang"><span class="lang-name">English<small>Advanced</small></span><span class="lang-level">C1</span>
+                <span class="cefr" aria-hidden="true"><i class="on" style="--k:0">A1</i><i class="on" style="--k:1">A2</i><i class="on" style="--k:2">B1</i><i class="on" style="--k:3">B2</i><i class="on" style="--k:4">C1</i><i>C2</i></span></li>
+              <li class="lang"><span class="lang-name">German<small>Upper intermediate</small></span><span class="lang-level">B2</span>
+                <span class="cefr" aria-hidden="true"><i class="on" style="--k:0">A1</i><i class="on" style="--k:1">A2</i><i class="on" style="--k:2">B1</i><i class="on" style="--k:3">B2</i><i>C1</i><i>C2</i></span></li>
+              <li class="lang"><span class="lang-name">Swedish<small>Elementary</small></span><span class="lang-level">A2</span>
+                <span class="cefr" aria-hidden="true"><i class="on" style="--k:0">A1</i><i class="on" style="--k:1">A2</i><i>B1</i><i>B2</i><i>C1</i><i>C2</i></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" aria-labelledby="contact-h">
+    <div class="wrap section-grid">
+      <header class="section-head" data-nosnow>
+        <h2 id="contact-h">Contact</h2>
+      </header>
+      <div class="section-body" data-nosnow>
+        <p class="contact-lede">The best way to reach me is a message on LinkedIn.</p>
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/sofoklis-tsompanoglou-36571020b" target="_blank" rel="noopener">
+          Connect on LinkedIn
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5l7-7M6 4.5h5.5V10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <dl class="contact-list">
+          <div class="c-row"><dt>Email</dt><dd><a href="mailto:sofoklis.i.tsompanoglou@gmail.com">sofoklis.i.tsompanoglou@gmail.com</a><button class="copy-btn" type="button" data-copy="sofoklis.i.tsompanoglou@gmail.com">Copy</button></dd></div>
+          <div class="c-row"><dt>Phone</dt><dd><a href="tel:+46702826661">+46 702 82 66 61</a></dd></div>
+          <div class="c-row"><dt>Website</dt><dd><a href="https://aeormenlabs.com" target="_blank" rel="noopener">aeormenlabs.com</a></dd></div>
+          <div class="c-row"><dt>Location</dt><dd><span class="plain">Västra Götaland, Sweden</span></dd></div>
+        </dl>
+        <p class="visually-hidden" aria-live="polite" id="copyStatus"></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<audio id="music" src="music.mp3" preload="auto" loop></audio>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-inner" data-nosnow>
+      <p>Sofoklis Tsompanoglou · Västra Götaland, Sweden</p>
+      <p class="greeting" lang="sv">God jul och gott nytt år</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function save(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  function load(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+
+  /* Career chart ------------------------------------------------------ */
+  var chart = document.getElementById('chart');
+  var d = new Date();
+  var nowY = d.getFullYear() + (d.getMonth() + d.getDate() / 31) / 12;
+  var d0 = 2011, d1 = Math.max(2027, Math.ceil(nowY + 0.02));
+  chart.style.setProperty('--span', d1 - d0);
+  var axis = document.getElementById('axis');
+  for (var y = 2027; y < d1; y++) {
+    var s = document.createElement('span');
+    s.textContent = y;
+    s.style.setProperty('--y', y);
+    if ((y - d0) % 3) s.className = 'minor';
+    axis.appendChild(s);
+  }
+  var rows = Array.prototype.slice.call(chart.querySelectorAll('.bar-row'));
+  rows.forEach(function (r) {
+    var bar = r.querySelector('.bar');
+    var start = parseFloat(r.dataset.start);
+    var ongoing = r.dataset.end === 'now';
+    var end = ongoing ? nowY : parseFloat(r.dataset.end);
+    bar.style.setProperty('--s', start);
+    bar.style.setProperty('--e', Math.max(end, start + 0.12));
+    if (ongoing) bar.classList.add('ongoing');
+  });
+  rows.slice().sort(function (a, b) { return a.dataset.start - b.dataset.start; })
+    .forEach(function (r, i) { r.querySelector('.bar').style.setProperty('--i', i); });
+  requestAnimationFrame(function () { chart.classList.add('is-drawn'); });
+
+  /* In-page jumps: briefly mark the target so the eye lands on it ------ */
+  function flash(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.classList.remove('is-flash');
+    void el.offsetWidth;
+    el.classList.add('is-flash');
+  }
+  /* Handle in-page links in script so they also work where the browser
+     will not follow #hash links (previews, embedded viewers). */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href').slice(1);
+    var el = id ? document.getElementById(id) : null;
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({ behavior: reduce.matches ? 'auto' : 'smooth', block: 'start' });
+    try { history.pushState(null, '', '#' + id); } catch (err) {}
+    if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
+    el.focus({ preventScroll: true });
+    if (id !== 'top' && id !== 'main') setTimeout(function () { flash(id); }, reduce.matches ? 0 : 380);
+  });
+
+  /* Sticky header: note when the page has scrolled, and mark the section in view */
+  function onScroll() { root.classList.toggle('scrolled', window.scrollY > 24); }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.site-nav a[href^="#"]'));
+  function markSection() {
+    var line = 120, current = null;
+    navLinks.forEach(function (a) {
+      var s = document.getElementById(a.getAttribute('href').slice(1));
+      if (s && s.getBoundingClientRect().top <= line) current = a;
+    });
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) current = navLinks[navLinks.length - 1];
+    navLinks.forEach(function (a) {
+      if (a === current) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+    });
+  }
+  var markPending = false;
+  window.addEventListener('scroll', function () {
+    if (markPending) return;
+    markPending = true;
+    requestAnimationFrame(function () { markPending = false; markSection(); });
+  }, { passive: true });
+  markSection();
+
+  /* Music: starts on load at 30% volume. Browsers block sound until the visitor
+     interacts, so if the first attempt is refused, the song starts on their first
+     click, tap or key press. Once they pause it, it is never restarted for them. */
+  (function () {
+    var btn = document.getElementById('musicBtn');
+    var audio = document.getElementById('music');
+    if (!btn || !audio) return;
+    audio.volume = 0.3;
+    var hint = document.getElementById('musicHint');
+    var userPaused = false;
+    /* Events that browsers accept as permission to play sound. Touch screens only
+       grant it when the tap ends, so pointerup and touchend matter on phones. */
+    var EVENTS = ['pointerdown', 'pointerup', 'touchend', 'click', 'keydown'];
+    function sync() {
+      btn.setAttribute('aria-pressed', String(!audio.paused));
+      if (!audio.paused) hint.hidden = true;
+    }
+    function tryPlay() {
+      var p = audio.play();
+      if (p && p.catch) p.catch(function () { sync(); });
+      return p;
+    }
+    function onInteraction(e) {
+      if (btn.contains(e.target)) return; /* the button handles its own clicks */
+      if (userPaused || !audio.paused) { stopWaiting(); return; }
+      var p = tryPlay();
+      if (p && p.then) p.then(stopWaiting, function () {}); /* refused: keep waiting */
+    }
+    function startWaiting() {
+      hint.textContent = (window.matchMedia('(pointer: coarse)').matches ? 'Tap' : 'Click') + ' anywhere to play music';
+      hint.hidden = false;
+      EVENTS.forEach(function (t) { document.addEventListener(t, onInteraction, true); });
+    }
+    function stopWaiting() {
+      hint.hidden = true;
+      EVENTS.forEach(function (t) { document.removeEventListener(t, onInteraction, true); });
+    }
+    var first = tryPlay();
+    if (first && first.then) first.then(stopWaiting, startWaiting);
+    btn.addEventListener('click', function () {
+      stopWaiting();
+      if (audio.paused) { userPaused = false; tryPlay(); }
+      else { userPaused = true; audio.pause(); }
+    });
+    audio.addEventListener('play', sync);
+    audio.addEventListener('pause', sync);
+    audio.addEventListener('error', function () { sync(); btn.title = 'The song could not be loaded'; });
+  })();
+
+  /* Skills explorer ---------------------------------------------------- */
+  var skillBtns = Array.prototype.slice.call(document.querySelectorAll('.skill-btn'));
+  var panel = document.getElementById('evidence');
+  var side = document.getElementById('skillsSide');
+  var evTitle = document.getElementById('evTitle');
+  var evList = document.getElementById('evList');
+  var evStatus = document.getElementById('evStatus');
+  var wide = window.matchMedia('(min-width: 1100px)');
+  var current = null;
+
+  function placePanel() {
+    if (!current) return;
+    if (wide.matches) { if (panel.parentNode !== side) side.appendChild(panel); }
+    else if (panel.parentNode !== current.parentNode) current.parentNode.appendChild(panel);
+  }
+  function selectSkill(btn, byUser) {
+    current = btn;
+    skillBtns.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+    var name = btn.querySelector('.skill-name').textContent;
+    var ids = btn.dataset.evidence.split(' ');
+    evTitle.textContent = name;
+    evList.innerHTML = '';
+    ids.forEach(function (id, n) {
+      var point = document.getElementById(id);
+      var role = point.closest('.role');
+      var li = document.createElement('li');
+      li.style.setProperty('--n', n);
+      var a = document.createElement('a');
+      a.href = '#' + id;
+      var r = document.createElement('span');
+      r.className = 'ev-role';
+      r.textContent = role.dataset.short + ' · ' + role.dataset.when;
+      var t = document.createElement('span');
+      t.className = 'ev-text';
+      t.textContent = point.textContent + ' ';
+      var go = document.createElement('span');
+      go.className = 'ev-go';
+      go.setAttribute('aria-hidden', 'true');
+      go.textContent = 'See in context ↑';
+      a.appendChild(r); a.appendChild(t); a.appendChild(go);
+      li.appendChild(a);
+      evList.appendChild(li);
+    });
+    if (byUser) {
+      document.querySelectorAll('.points li.is-evidence').forEach(function (p) { p.classList.remove('is-evidence'); });
+      ids.forEach(function (id) { document.getElementById(id).classList.add('is-evidence'); });
+      evStatus.textContent = name + ': ' + ids.length + (ids.length === 1 ? ' line' : ' lines') + ' of evidence, marked in the experience list.';
+    }
+    placePanel();
+  }
+  skillBtns.forEach(function (b) { b.addEventListener('click', function () { selectSkill(b, true); }); });
+  if (wide.addEventListener) wide.addEventListener('change', placePanel); else wide.addListener(placePanel);
+  selectSkill(skillBtns[0], false);
+
+
+  /* Copy email --------------------------------------------------------- */
+  function copyText(text, done) {
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      try { if (document.execCommand('copy')) done(); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(done, fallback);
+    else fallback();
+  }
+  var copyStatus = document.getElementById('copyStatus');
+  document.querySelectorAll('[data-copy]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      copyText(b.getAttribute('data-copy'), function () {
+        b.textContent = 'Copied';
+        copyStatus.textContent = 'Email address copied';
+        setTimeout(function () { b.textContent = 'Copy'; copyStatus.textContent = ''; }, 2200);
+      });
+    });
+  });
+  /* Christmas layer ----------------------------------------------------
+     Snow, a string of lights and a greeting. Always on; with reduced
+     motion the flakes and lights stay still. Flakes fall across the whole page,
+     under the content, and are dimmed behind elements marked data-nosnow. */
+  (function () {
+    var canvas = document.getElementById('snow');
+    var ctx = canvas.getContext && canvas.getContext('2d');
+    var flakes = [], rects = [], W = 0, H = 0, dpr = 1, on = true, raf = 0;
+
+    /* Sprites: six-armed ice crystals in three shapes, plus a soft dot for distant flakes */
+    function crystal(variant) {
+      var S = 96, c = document.createElement('canvas');
+      c.width = c.height = S;
+      var g = c.getContext('2d'), R = S * 0.4, s60 = Math.sin(Math.PI / 3);
+      var branches = [
+        [[0.36, 0.26], [0.6, 0.2], [0.82, 0.11]],
+        [[0.5, 0.34], [0.78, 0.17]],
+        [[0.28, 0.13], [0.52, 0.3], [0.78, 0.16]]
+      ][variant];
+      g.translate(S / 2, S / 2);
+      g.strokeStyle = '#f3f7fb';
+      g.fillStyle = '#f3f7fb';
+      g.lineCap = 'round';
+      g.lineJoin = 'round';
+      g.shadowColor = 'rgba(205, 225, 255, .9)';
+      g.shadowBlur = 5;
+      g.lineWidth = variant === 1 ? 4.6 : 3.8;
+      for (var i = 0; i < 6; i++) {
+        g.save();
+        g.rotate(i * Math.PI / 3);
+        g.beginPath();
+        g.moveTo(0, 0); g.lineTo(0, -R);
+        branches.forEach(function (b) {
+          var y = -R * b[0], l = R * b[1];
+          g.moveTo(0, y); g.lineTo(-l * s60, y - l * 0.5);
+          g.moveTo(0, y); g.lineTo(l * s60, y - l * 0.5);
+        });
+        g.stroke();
+        g.restore();
+      }
+      if (variant === 1) {
+        g.beginPath();
+        for (var k = 0; k < 6; k++) {
+          var a = k * Math.PI / 3 - Math.PI / 2, rr = R * 0.2;
+          g[k ? 'lineTo' : 'moveTo'](Math.cos(a) * rr, Math.sin(a) * rr);
+        }
+        g.closePath(); g.lineWidth = 2.2; g.stroke();
+      }
+      g.beginPath(); g.arc(0, 0, 3, 0, Math.PI * 2); g.fill();
+      return c;
+    }
+    function softDot() {
+      var S = 32, c = document.createElement('canvas');
+      c.width = c.height = S;
+      var g = c.getContext('2d'), grad = g.createRadialGradient(S / 2, S / 2, 0, S / 2, S / 2, S / 2);
+      grad.addColorStop(0, 'rgba(245,248,252,1)');
+      grad.addColorStop(0.35, 'rgba(245,248,252,.7)');
+      grad.addColorStop(1, 'rgba(245,248,252,0)');
+      g.fillStyle = grad; g.fillRect(0, 0, S, S);
+      return c;
+    }
+    if (!ctx) return;
+    var sprites = [crystal(0), crystal(1), crystal(2)], dot = softDot();
+
+    function measure() {
+      var sx = window.scrollX, sy = window.scrollY;
+      rects = Array.prototype.map.call(document.querySelectorAll('[data-nosnow]'), function (el) {
+        var b = el.getBoundingClientRect();
+        return { x: b.left + sx - 8, y: b.top + sy - 8, w: b.width + 16, h: b.height + 16 };
+      });
+    }
+    /* Three depth layers: distant soft dots, mid crystals, a few large near crystals */
+    function flake(anywhere) {
+      var p = Math.random(), layer = p < 0.6 ? 0 : p < 0.9 ? 1 : 2;
+      var size = layer === 0 ? 3 + Math.random() * 3 : layer === 1 ? 12 + Math.random() * 8 : 22 + Math.random() * 10;
+      return {
+        layer: layer, size: size,
+        sprite: layer === 0 ? dot : sprites[(Math.random() * sprites.length) | 0],
+        x: Math.random() * W, y: anywhere ? Math.random() * H : -size,
+        vy: layer === 0 ? 0.2 + Math.random() * 0.2 : layer === 1 ? 0.4 + Math.random() * 0.25 : 0.65 + Math.random() * 0.3,
+        ph: Math.random() * 6.28, sw: 0.12 + Math.random() * 0.3,
+        rot: Math.random() * 6.28, vr: (Math.random() - 0.5) * 0.01,
+        a: layer === 0 ? 0.35 + Math.random() * 0.3 : layer === 1 ? 0.6 + Math.random() * 0.25 : 0.8 + Math.random() * 0.15
+      };
+    }
+    function resize() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = window.innerWidth; H = window.innerHeight;
+      canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+      var n = Math.round(Math.min(260, Math.max(70, W * H / 5500)));
+      while (flakes.length < n) flakes.push(flake(true));
+      flakes.length = n;
+      measure();
+      buildGarland();
+      buildForest();
+      if (on && reduce.matches) drawStatic();
+    }
+    function distance(x, y) {
+      var sy = window.scrollY, best = Infinity;
+      for (var i = 0; i < rects.length; i++) {
+        var r = rects[i], top = r.y - sy;
+        var dx = Math.max(r.x - x, 0, x - (r.x + r.w));
+        var dy = Math.max(top - y, 0, y - (top + r.h));
+        if (dx === 0 && dy === 0) return 0;
+        var dd = Math.sqrt(dx * dx + dy * dy);
+        if (dd < best) best = dd;
+      }
+      return best;
+    }
+    function paint(move) {
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (var i = 0; i < flakes.length; i++) {
+        var f = flakes[i];
+        if (move) {
+          f.y += f.vy; f.ph += 0.01; f.x += Math.sin(f.ph) * f.sw; f.rot += f.vr;
+          if (f.y > H + f.size) { var nf = flake(false); for (var k in nf) f[k] = nf[k]; }
+          if (f.x < -f.size) f.x = W + f.size; else if (f.x > W + f.size) f.x = -f.size;
+        }
+        /* Snow covers the whole page and passes behind the text; it is dimmed there so text stays easy to read */
+        var v = 0.4 + 0.6 * Math.min(1, Math.max(0, (distance(f.x, f.y) - f.size / 2) / 16));
+        var c = Math.cos(f.rot) * dpr, s = Math.sin(f.rot) * dpr;
+        ctx.setTransform(c, s, -s, c, f.x * dpr, f.y * dpr);
+        ctx.globalAlpha = f.a * v;
+        ctx.drawImage(f.sprite, -f.size / 2, -f.size / 2, f.size, f.size);
+      }
+      ctx.globalAlpha = 1;
+    }
+    function loop() { paint(true); raf = requestAnimationFrame(loop); }
+    function drawStatic() { paint(false); }
+
+    /* A string of warm lights hanging under the header line */
+    function buildGarland() {
+      var svg = document.getElementById('garland');
+      var w = document.documentElement.clientWidth, h = 30, top = 1, sag = 13;
+      var n = Math.max(3, Math.round(w / 150)), seg = w / n;
+      var colors = ['#f2c46d', '#e5604a', '#8cc79a', '#fbe7c2'];
+      var d = 'M0 ' + top, bulbs = '', k = 0;
+      for (var i = 0; i < n; i++) {
+        var x0 = i * seg;
+        d += ' Q' + (x0 + seg / 2).toFixed(1) + ' ' + (top + sag * 2) + ' ' + (x0 + seg).toFixed(1) + ' ' + top;
+        [0.22, 0.5, 0.78].forEach(function (t) {
+          var x = x0 + seg * t, y = top + 2 * (1 - t) * t * sag * 2;
+          bulbs += '<g class="bulb" style="--c:' + colors[k % 4] + ';--d:' + ((k * 0.73) % 3).toFixed(2) + 's" transform="translate(' + x.toFixed(1) + ' ' + y.toFixed(1) + ')">' +
+            '<rect class="cap" x="-1.7" y="0" width="3.4" height="2.8" rx=".7"/>' +
+            '<ellipse class="glass" cx="0" cy="6.6" rx="2.9" ry="4.1"/></g>';
+          k++;
+        });
+      }
+      svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+      svg.setAttribute('width', w);
+      svg.setAttribute('height', h);
+      svg.innerHTML = '<path class="wire" d="' + d + '"/>' + bulbs;
+    }
+
+    /* Two rows of spruces with a snowy ground; two front trees are dressed
+       as Christmas trees with a star and a few lights. Seeded so the layout
+       stays the same on every visit and resize. */
+    function buildForest() {
+      var svg = document.getElementById('forest');
+      var w = document.documentElement.clientWidth, h = svg.parentNode.clientHeight || 160;
+      var seed = 11;
+      function rnd() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+      function f(n) { return n.toFixed(1); }
+      function spruce(cx, by, th, tw, tiers) {
+        var top = by - th, step = th * 0.86 / tiers, L = [], R = [], i;
+        for (i = 1; i <= tiers; i++) {
+          var hw = tw / 2 * (0.2 + 0.8 * i / tiers), y = top + step * i;
+          L.push([cx - hw, y + step * 0.12]); R.push([cx + hw, y + step * 0.12]);
+          if (i < tiers) { L.push([cx - hw * 0.42, y - step * 0.04]); R.push([cx + hw * 0.42, y - step * 0.04]); }
+        }
+        var tr = Math.max(1.5, tw * 0.045), yb = top + step * tiers + step * 0.12;
+        var d = 'M' + f(cx) + ' ' + f(top);
+        for (i = 0; i < L.length; i++) d += 'L' + f(L[i][0]) + ' ' + f(L[i][1]);
+        d += 'L' + f(cx - tr) + ' ' + f(yb) + 'L' + f(cx - tr) + ' ' + f(by) + 'L' + f(cx + tr) + ' ' + f(by) + 'L' + f(cx + tr) + ' ' + f(yb);
+        for (i = R.length - 1; i >= 0; i--) d += 'L' + f(R[i][0]) + ' ' + f(R[i][1]);
+        return { d: d + 'Z', top: top, step: step, tw: tw, tiers: tiers };
+      }
+      function star(cx, cy, R) {
+        var d = '', k;
+        for (k = 0; k < 10; k++) {
+          var a = -Math.PI / 2 + k * Math.PI / 5, r = k % 2 ? R * 0.45 : R;
+          d += (k ? 'L' : 'M') + f(cx + Math.cos(a) * r) + ' ' + f(cy + Math.sin(a) * r);
+        }
+        return d + 'Z';
+      }
+
+      var ground = h - Math.min(18, h * 0.1);
+      var far = '', near = '', deco = '', i, n;
+
+      n = Math.ceil(w / 34);
+      for (i = 0; i < n; i++) {
+        var fh = h * (0.32 + rnd() * 0.22);
+        far += spruce((i + 0.5) * w / n + (rnd() - 0.5) * 18, ground + 4, fh, fh * 0.42, 5).d;
+      }
+
+      n = Math.max(4, Math.ceil(w / 95));
+      var dressed = w < 700 ? [Math.floor(n * 0.75)] : [Math.floor(n * 0.14), Math.floor(n * 0.8)];
+      var colors = ['#f2c46d', '#e5604a', '#8cc79a', '#fbe7c2'], k = 0;
+      for (i = 0; i < n; i++) {
+        var isXmas = dressed.indexOf(i) > -1;
+        var th = isXmas ? h * 0.9 : h * (0.5 + rnd() * 0.32);
+        var cx = (i + 0.5) * w / n + (rnd() - 0.5) * 30;
+        var t = spruce(cx, ground + 6, th, th * (isXmas ? 0.52 : 0.44), 6);
+        near += t.d;
+        if (isXmas) {
+          deco += '<path class="star" d="' + star(cx, t.top - 2, Math.max(5, th * 0.045)) + '"/>';
+          for (var tier = 2; tier <= t.tiers; tier++) {
+            var hw = t.tw / 2 * (0.2 + 0.8 * tier / t.tiers);
+            var per = tier < 4 ? 1 : 2;
+            for (var j = 0; j < per; j++) {
+              var lx = cx + (per === 1 ? (rnd() - 0.5) * hw * 0.6 : (j ? 1 : -1) * hw * (0.25 + rnd() * 0.3));
+              var ly = t.top + t.step * tier - t.step * (0.25 + rnd() * 0.25);
+              deco += '<circle class="tl" cx="' + f(lx) + '" cy="' + f(ly) + '" r="' + f(Math.max(1.6, th * 0.012)) + '" style="--c:' + colors[k % 4] + ';--d:' + ((k * 0.61) % 2.6).toFixed(2) + 's"/>';
+              k++;
+            }
+          }
+        }
+      }
+
+      var g = 'M0 ' + f(h) + 'L0 ' + f(ground);
+      var hills = Math.max(3, Math.round(w / 260)), hs = w / hills;
+      for (i = 0; i < hills; i++) g += 'Q' + f(i * hs + hs / 2) + ' ' + f(ground - 6 - rnd() * 6) + ' ' + f((i + 1) * hs) + ' ' + f(ground);
+      g += 'L' + f(w) + ' ' + f(h) + 'Z';
+
+      svg.setAttribute('viewBox', '0 0 ' + w + ' ' + f(h));
+      svg.innerHTML = '<path class="far" d="' + far + '"/><path class="near" d="' + near + '"/>' + deco + '<path class="ground" d="' + g + '"/>';
+    }
+
+    function start() {
+      cancelAnimationFrame(raf);
+      if (reduce.matches) drawStatic(); else if (!document.hidden) loop();
+    }
+
+    var t = 0;
+    window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(resize, 120); });
+    window.addEventListener('scroll', function () { if (on && reduce.matches) requestAnimationFrame(drawStatic); }, { passive: true });
+    document.addEventListener('visibilitychange', start);
+    if (reduce.addEventListener) reduce.addEventListener('change', start);
+    if ('ResizeObserver' in window) new ResizeObserver(function () { measure(); }).observe(document.body);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+    window.addEventListener('load', measure);
+
+    resize();
+    start();
+  })();
+})();
+</script>
+</body>
+</html>
