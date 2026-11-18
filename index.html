@@ -313,9 +313,10 @@ h3 { font-family: var(--serif); font-weight: 400; }
   scroll-margin-top: 2rem; transition: background-color .35s, box-shadow .35s;
 }
 .points li::before { content: ""; position: absolute; left: .55rem; top: calc(.35rem + .8em - 2.5px); width: 5px; height: 5px; border-radius: 50%; background: var(--c); }
-.points li.is-evidence { background: var(--accent-soft); box-shadow: inset 2px 0 0 var(--accent); }
+/* Highlights are a thin red line on the left edge only; a tinted fill turns brown on the dark background */
+.points li.is-evidence { box-shadow: inset 2px 0 0 var(--accent); }
 .is-flash { animation: flash 1.9s var(--ease); }
-@keyframes flash { 0%, 25% { background-color: var(--biz-soft); } 100% { background-color: transparent; } }
+@keyframes flash { 0%, 55% { box-shadow: inset 2px 0 0 var(--accent); } 100% { box-shadow: inset 2px 0 0 transparent; } }
 
 /* Small section subheadings (certifications, languages) */
 .sub-h { font-family: var(--sans); font-size: 1rem; font-weight: 600; margin: 0 0 .9rem; }
@@ -807,7 +808,8 @@ h3 { font-family: var(--serif); font-weight: 400; }
     if (location.hash) { try { history.replaceState(null, '', location.pathname + location.search); } catch (err) {} }
     if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
     el.focus({ preventScroll: true });
-    if (id !== 'top' && id !== 'main') setTimeout(function () { flash(id); }, reduce.matches ? 0 : 380);
+    /* Mark single entries and lines; whole sections don't flash (the menu already shows where you are) */
+    if (el.tagName !== 'SECTION' && el.tagName !== 'MAIN') setTimeout(function () { flash(id); }, reduce.matches ? 0 : 380);
   });
 
   /* Sticky header: note when the page has scrolled, and mark the section in view */
